@@ -93,6 +93,12 @@
                                 <i class="icon icon-speedometer"></i> Dashboard
                             </a>
                         </li>
+                        
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">
+                                <i class="icon icon-people"></i> Users
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
