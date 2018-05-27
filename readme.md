@@ -15,10 +15,10 @@ $ git clone https://github.com/isamuhiro/carbon-admin-laravel.git my-awesome-app
 $ composer install && cp .env.example .env
 ```
 
-#### After configurate your `.env` file run the migrations, seeds and auth commands
+#### After configurate your `.env` file run the migrations, seeds and key generate 
 
 ```sh
-$ php artisan migrate:fresh --seed && php artisan make:auth
+$  php artisan key:generate && php artisan migrate:fresh --seed
 ```
 
 Then you should good to go and start develop your laravel application. 🙌
