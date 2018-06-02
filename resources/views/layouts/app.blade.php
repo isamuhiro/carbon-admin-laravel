@@ -90,13 +90,13 @@
                         <li class="nav-title">Dashboard</li>
 
                         <li class="nav-item">
-                            <a href="/" class="nav-link">
+                            <a href="/" class="nav-link {{{ (Request::is('/') ? 'active' : '') }}}">
                                 <i class="icon icon-speedometer"></i> Dashboard
                             </a>
                         </li>
                         
                         <li class="nav-item">
-                            <a href="/users" class="nav-link">
+                            <a href="/users" class="nav-link {{{ (Request::is('users') ? 'active' : '') }}}">
                                 <i class="icon icon-people"></i> Users
                             </a>
                         </li>
