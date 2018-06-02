@@ -100,6 +100,11 @@
                                 <i class="icon icon-people"></i> Users
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/todos" class="nav-link {{{ (Request::is('todos') ? 'active' : '') }}}">
+                                <i class="fa fa-envelope"></i> Todos
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>

@@ -19,6 +19,10 @@ class UsersController extends Controller
         return view('users.edit', ['user' => $user]);
     }
 
+    public function create(){
+        return 'em construção..';
+    }
+
     public function update(Request $request, $id)
     {
         $this->validate($request, [
