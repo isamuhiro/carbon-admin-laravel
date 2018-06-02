@@ -1,7 +1,7 @@
 @extends('layouts.app') @section('content')
 <div class="container">
 
-<form action="/user/{{Auth::user()->id}}" method="POST">
+<form action="/users/{{$user->id}}" method="POST">
         {{ csrf_field() }}
         {{ method_field('PATCH') }}
         @if($errors->all())
@@ -22,7 +22,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
                         </div>
-                        <input id="help-text-input" class="form-control" placeholder="Digite seu nome" value="{{Auth::user()->name}}" name="name">
+                        <input id="help-text-input" class="form-control" placeholder="Digite seu nome" value="{{$user->name}}" name="name">
                     </div>
                 </div>
                 <div class="form-group">
@@ -31,7 +31,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                         </div>
-                        <input id="help-text-input" class="form-control" placeholder="Enter email" value="{{Auth::user()->email}}" name="email">
+                        <input id="help-text-input" class="form-control" placeholder="Enter email" value="{{$user->email}}" name="email">
                     </div>
                 </div>
             </div>
@@ -43,29 +43,23 @@
                 <small class="form-text">Altere sua senha</small>
             </div>
             <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="help-text-input" class="form-control-label">Nova Senha</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
-                                </div>
-                                <input id="help-text-input" class="form-control" placeholder="Informe sua nova senha" name="password" type="password">
-                            </div>
-                            <small class="form-text">Caso nenhuma senha for informada, ela não será alterada.</small>
+                <div class="form-group">
+                    <label for="help-text-input" class="form-control-label">Nova Senha</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-key"></i></span>
                         </div>
+                        <input id="help-text-input" class="form-control" placeholder="Informe sua nova senha" name="password" type="password">
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="help-text-input" class="form-control-label">Confirme sua senha</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
-                                </div>
-                                <input id="help-text-input" class="form-control" placeholder="Informe sua senha novamente" name="password_confirmation" type="password">
-                            </div>
-                        </div>
+                    <small class="form-text">Caso nenhuma senha for informada, ela não será alterada.</small>
+                </div>
+                <div class="form-group">
+                    <label for="help-text-input" class="form-control-label">Confirme sua senha</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                    </div>
+                        <input id="help-text-input" class="form-control" placeholder="Informe sua senha novamente" name="password_confirmation" type="password">
                     </div>
                 </div>
             </div>

@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carbon - Admin Template</title>
-    <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="{{asset('./vendor/simple-line-icons/css/simple-line-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('./vendor/font-awesome/css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('./css/styles.css')}}">
+    @yield('css')
 </head>
 
 <body class="sidebar-fixed header-fixed">
@@ -19,7 +20,7 @@
             </a>
 
             <a class="navbar-brand" href="#">
-                <img src="./imgs/logo.png" alt="logo">
+                <img src="{{asset('./imgs/logo.png')}}" alt="logo">
             </a>
 
             <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
@@ -43,7 +44,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="./imgs/avatar-1.png" class="avatar avatar-sm" alt="logo">
+                        <img src="{{asset('./imgs/avatar-1.png')}}" class="avatar avatar-sm" alt="logo">
                         <span class="small ml-1 d-md-down-none">{{ Auth::user()->name }}</span>
                     </a>
 
@@ -95,7 +96,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a href="/" class="nav-link">
+                            <a href="/users" class="nav-link">
                                 <i class="icon icon-people"></i> Users
                             </a>
                         </li>
@@ -108,12 +109,12 @@
             </div>
         </div>
     </div>
-    <script src="./vendor/jquery/jquery.min.js"></script>
-    <script src="./vendor/popper.js/popper.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./vendor/chart.js/chart.min.js"></script>
-    <script src="./js/carbon.js"></script>
-    <script src="./js/demo.js"></script> @yield('scripts')
+    <script src="{{asset('./vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('./vendor/popper.js/popper.min.js')}}"></script>
+    <script src="{{asset('./vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('./vendor/chart.js/chart.min.js')}}"></script>
+    <script src="{{asset('./js/carbon.js')}}"></script>
+    <script src="{{asset('./js/demo.js')}}"></script> @yield('scripts')
 </body>
 
 </html>
