@@ -5,8 +5,8 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <form action="" method="POST">
+        <div class="col-md-12">
+            <form action="users" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
                 @if($errors->all())
@@ -21,7 +21,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
                         </div>
-                    <input id="help-text-input" class="form-control" placeholder="Nome" name="name">
+                        <input id="help-text-input" class="form-control" placeholder="Nome" name="name" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
@@ -34,21 +34,21 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="help-text-input" class="form-control-label">Password</label>
+                    <label for="help-text-input" class="form-control-label">Senha</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-key"></i></span>
                         </div>
-                    <input id="help-text-input" class="form-control" placeholder="Password" name="password">
+                    <input type="password" id="help-text-input" class="form-control" placeholder="Senha" name="password">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="help-text-input" class="form-control-label">Confirm password</label>
+                    <label for="help-text-input" class="form-control-label">Endereço</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            <span class="input-group-text"><i class="fa fa-address-card"></i></span>
                         </div>
-                    <input id="help-text-input" class="form-control" placeholder="Confirm password" name="confirm_password">
+                    <input id="help-text-input" class="form-control" placeholder="Endereço" name="address">
                     </div>
                 </div>
             </form>
